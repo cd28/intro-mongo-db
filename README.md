@@ -53,12 +53,12 @@ This exercise will have you create connection logic and mongoose schemas. Using 
 
 This exercise will have you add relationships between models. You'll then use those models to create slightly more advanced queries than the last exercise
 
-- [ ] check out to the `start` branch
-- [ ] check the README on how to run your test
-- [ ] the post model should have have a one-to-one author field that points to the author collection
-- [ ] the post model should have a one-to-many similarPost field that points to posts
-- [ ] get all the post model tests to pass
-- [ ] get all the query tests to pass
+- [x] check out to the `start` branch
+- [x] check the README on how to run your test
+- [x] the post model should have have a one-to-one author field that points to the author collection
+- [x] the post model should have a one-to-many similarPost field that points to posts
+- [x] get all the post model tests to pass
+- [x] get all the query tests to pass
 
 ### Hooks
 * location - `exercises/hooks`
