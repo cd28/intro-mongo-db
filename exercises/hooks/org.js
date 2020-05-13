@@ -12,7 +12,7 @@ const orgSchema = new mongoose.Schema({
     status: {
       type: String,
       required: true,
-      default: ['active'],
+      default: 'active',
       enum: ['active', 'trialing', 'overdue', 'canceled']
     },
     last4: {
@@ -22,5 +22,14 @@ const orgSchema = new mongoose.Schema({
     }
   }
 })
+
+orgSchema.post('remove', async (doc, next) => {
+  await Project.remove({ org: doc._id }).exec()
+  next()
+})
+
+// orgSchema.virtual('avatar').get(function () {
+//   return `${cdnUrl}/${this._id.toString()}`
+// })
 
 module.exports = mongoose.model('org', orgSchema)
